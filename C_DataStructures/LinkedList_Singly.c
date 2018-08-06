@@ -11,6 +11,7 @@ void printList(struct Node *n){
     printf(" %d ", n->data);
     n = n->next;
   }
+  printf("\n");
 }
 
 /*Add a node at the front ( 4 step)
@@ -63,6 +64,27 @@ void append(struct Node** head_ref, int new_data){
   last->next = new_node;
   return;
 }
+/*Delering node (3 steop)
+Find previous node of the node to be deleted
+chage next of previous node
+Free memory of the node to be deleted*/
+void deleteNode(struct Node **head_ref, int key){
+  struct Node* temp = *head_ref, *prev;
+  if (temp != NULL && temp->data == key){
+    *head_ref = temp->next;
+    free(temp);
+    return;
+  }
+  while (temp != NULL && temp->data != key){
+    prev = temp;
+    temp = temp->next;
+  }
+  if (temp == NULL) return;
+  prev->next = temp->next;
+  free(temp);
+}
+
+
 
 int main(){
   //Simple declaration of 3 node linked list
@@ -84,13 +106,17 @@ int main(){
   //different methods
   //Insert 0 at begining
   push(&head,0);
+  printList(head);
   //Insert 5 after 'second' node
   insetAfter(second, 5);
+  printList(head);
   // Insert 8 at end of linked List
   append(&head,8);
-
-
   printList(head);
+  //Delete 5
+  deleteNode(&head,5);
+  printList(head);
+
   return 0;
 
 }
