@@ -1,0 +1,36 @@
+System Calls
+
+Functions implemented by system meant to be called from userspace.
+there are about 300.
+include/uapi/asm-generic/unistd.h
+libc
+
+Sys call mechanics: Std liv uses arch-dependent means to invoke sys call mechanism.
+
+Error return negative value , lib changes "errno" to abs(return value)
+0 and +ve number is no error.
+
+printk: similar to printf()
+output of printk sent to RAM buffer. Important are shown on consol.
+
+dmesg: Shows RAM buffer messages from kernel.
+(RAM buffer is limited)
+
+Logging demon logs the messages. stored at /var/log/messages
+tail -f /var/log/messages
+head is for beginning, tail is for end
+
+Proc and sysfs file system and virtual file system.
+/proc : "Process"
+Threads are under the directory "Tasks"
+
+sysfs is for "Kernel object". File system
+it is hardware info.
+
+Device file: Major no, Minor no, type (c,d)
+character and block
+
+Char driver can implement open(),read(),write(), itotcl()
+process opens device file and functions operates. Kernel arranges function and orders.
+
+echo hi > /dev/null would open and write

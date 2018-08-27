@@ -1,0 +1,32 @@
+GRUB: Booting
+GRUB built with support of filesys.
+GRUB has file name  completion.
+man -k grub
+
+Grub config
+grub 1 config file
+grub 2 is sophesticated
+/etc/grub.d
+/etc/default/grub
+
+edit or add /etc/grub.d
+run grub2-mkconfig
+'b' and Ctrl+x to boot from grub1 and grub2
+
+Grub passes params
+kernel process command line args
+Documentation/kernel-parameters.txt
+500 are documented
+__setup() macro
+
+booting
+initial root filesys
+initial RAM filesys (initrd)
+initrd has init, kernel runs that first
+init is liked to systemd now.
+start-up scripts /etc/rc.d
+
+initrd/initramfs file
+inside /boot for each kernel
+gzipped file
+distro versions has different images of init

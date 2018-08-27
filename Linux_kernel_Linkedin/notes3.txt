@@ -1,0 +1,39 @@
+LKM (Loadable kernel module)
+
+.ko sufix , object files
+contains code to run in kernel space
+
+Advantages: minimal,
+  add functionality without reboot,
+  allows for only needed functionality,
+  live updates,
+  accelerated Devlopement
+
+finding LKMs: /lib/modules
+config files
+module files have unique name , /lib/modules/{uname -r}(kernel ver)
+
+lsmod to load modules
+module, Size count, Used by
+
+rmmod to remove module
+rmmod -f (force)
+
+modinfo , module information
+Author, Params, Aliases, vermagic
+
+depmod, generates module config files for modprobe
+modules.dep
+
+insmod, insert/load module
+
+modprobe, preferred way to load module, easier than insmod
+Can remove module,lots of other options
+modprobe camellia-x86_64
+rmmod camellia_x86_64
+lsmod | head
+
+Compiling modules
+make -C /lib/modules/$(uname -r)/build M=$PWD modules
+load the simplemodule.c
+check lsmod | head and dmesg | tail
