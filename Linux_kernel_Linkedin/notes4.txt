@@ -1,0 +1,21 @@
+clean : remove the generated files
+mrproper : Remove most generated files + config + various backup files.
+distclean
+xconfig , gconfig : Gui tools
+menuconfig : arrow based
+config : questions based
+
+
+vmlinux : bare kernel
+modules : build all modules
+module_install : install mods
+
+bzimage
+install
+
+linux kernel is huge. 10K lines per day.
+Documentation and Man pages. use 'grep'.
+
+grep -i (ignore case)
+make cscope : fast search with menus
+make tags : vi -t <TAG> ; vi -t sys_read

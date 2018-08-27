@@ -1,0 +1,17 @@
+make menuconfig : Making and configuring own kernel,
+                  Selecting and adding different components,
+                  Arrow base navigation.
+
+make Xconfig: GUI based, Find and searching modules, help and documentation
+
+vmlinux : part of boot-able image
+          contains symbols, large
+make modules : 1000+ modules
+modules_install, calls depmod to generate config files
+make clean : removes generated files, doesnt remove .config
+mrproper removes .config files
+
+cross compile:
+arm-linux-gnueabi-gcc
+export CROSS_COMPILE = ar-linux-gnueabi-
+make ARCH
