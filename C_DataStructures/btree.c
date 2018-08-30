@@ -17,13 +17,31 @@ struct node* newNode(int data){
   return (node);
 }
 //Inorder traversal
-// left center right 
+// left center right
 void printInorder(struct node* node){
   if (node == NULL)
     return;
   printInorder(node->left);
   printf("%d",node->data);
   printInorder(node->right);
+}
+
+//Post order traversal
+void postOrder(struct node* node){
+  if (node == NULL)
+    return;
+  postOrder(node->left);
+  postOrder(node->right);
+  printf("%d",node->data);
+}
+
+//pre order traversal
+void preOrder(struct node* node){
+  if (node == NULL)
+    return;
+  printf("%d",node->data);
+  preOrder(node->left);
+  preOrder(node->right);
 }
 
 //Driver code
@@ -33,5 +51,9 @@ int main(){
   root -> left = newNode(2);
   root -> right = newNode(3);
   printInorder(root);
+  printf("\n");
+  postOrder(root);
+  printf("\n");
+  preOrder(root);
   return 0;
 }
