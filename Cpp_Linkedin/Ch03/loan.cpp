@@ -1,6 +1,6 @@
 /*
  * loan.cpp
- *
+ *	While loop example
  *  months to pay off the loans
  */
 
