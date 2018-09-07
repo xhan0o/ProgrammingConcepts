@@ -1,17 +1,18 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
 class Human {
 private:
-  std::string nameC;
+  string nameC;
 
 public:
-  Human(const std::string & name) : nameC(name){  }
+  Human(const string & name) : nameC(name){  }
 
-  std::string name() const {return nameC;}
+  string name() const {return nameC;}
 
   void talkTo(const Human & person) const{
-    std::cout << nameC << "says: Hello, " << person.name() << "!"<< std::endl;
+    cout << nameC << "says: Hello, " << person.name() << "!"<< endl;
   }
 };
 
@@ -20,7 +21,7 @@ int main() {
   Human jennie("jennie");
   joe.talkTo(jennie);
   jennie.talkTo(joe);
-  std::cout << std::endl << "Press 'Enter' to exit";
-  std::cin.ignore();
+  cout << endl << "Press 'Enter' to exit";
+  cin.ignore();
   return 0;
 }
