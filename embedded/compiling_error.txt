@@ -1,0 +1,4 @@
+/home/shan0o/Pract/embedded/bits.cpp: In function ‘void swap_here(int*, int*)’:
+/home/shan0o/Pract/embedded/bits.cpp:28:8: error: lvalue required as left operand of assignment
+   &x = 5;
+        ^
