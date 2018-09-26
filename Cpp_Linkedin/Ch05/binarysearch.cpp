@@ -1,6 +1,6 @@
 /*
 binarysearch.cpp
-selection Sort 
+selection Sort
 */
 #include <iostream>
 #include <ctime>

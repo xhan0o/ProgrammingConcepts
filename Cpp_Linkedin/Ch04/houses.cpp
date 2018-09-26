@@ -18,7 +18,7 @@ int main()
 
 	//Create a second instance
 	//provide values for color, bed, bath, and sqft
-	House h2("Tan", 3, 2, 2500);
+	House house2("Tan", 3, 2, 2500);
 
 	//print house information
 	printHouse(house1);

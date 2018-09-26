@@ -13,6 +13,10 @@ public:
   Vehicle(){
     cout << "This is Vehicle" << endl;
   }
+private:
+  void Texi(){
+    cout << "This is Texi" << endl;
+  }
 };
 
 //Main class 2
